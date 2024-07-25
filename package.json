@@ -1,0 +1,69 @@
+{
+  "name": "feSystemHub",
+  "version": "0.1.0",
+  "private": true,
+  "main": "src/main.js",
+  "module": "src/main.js",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "dev": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "@vue/composition-api": "^1.6.2",
+    "axios": "^0.26.0",
+    "core-js": "^3.6.5",
+    "dayjs": "^1.7.8",
+    "element-ui": "^2.15.13",
+    "jquery": "^2.2.4",
+    "js-cookie": "^2.2.1",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.1",
+    "rxjs": "^6.6.7",
+    "stats-webpack-plugin": "^0.7.0",
+    "vue": "^2.6.11",
+    "vue-currency-input": "^2.5.1",
+    "vue-i18n": "^8.24.3",
+    "vue-router": "^3.2.0",
+    "vuedraggable": "^2.24.3",
+    "vuex": "^3.4.0",
+    "wangeditor": "^4.7.11",
+    "wl-core": "^1.1.9"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-plugin-router": "~4.5.0",
+    "@vue/cli-plugin-vuex": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-vue": "^6.2.2",
+    "hard-source-webpack-plugin": "^0.13.1",
+    "less": "^3.0.4",
+    "less-loader": "^5.0.0",
+    "sass": "^1.26.10",
+    "sass-loader": "^9.0.2",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {}
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}

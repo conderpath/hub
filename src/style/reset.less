@@ -1,0 +1,66 @@
+/**++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 1. 文件名称：整个应用的重置
+ 2. 作者：object
+ -----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+@import './variables.less';
+@import "./app.less";
+
+body {
+  font-family: 'Source Han Sans', 'PingFang SC', microsoft yahei;
+  background-color: #f0f2f5 !important;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  vertical-align: middle;
+  box-sizing: border-box;
+}
+
+/*li {
+  list-style: none ;
+}*/
+
+a {
+  outline: none;
+  &:link {
+    text-decoration: none;
+  }
+  &:visited {
+    text-decoration: none;
+  }
+  &:active {
+    text-decoration: none;
+  }
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+::selection {
+  color: #fff;
+  background: @theme-color;
+}
+
+.ac-icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
+// iconfont前缀
+[class*='ac-icon-'] {
+  font-family: 'iconfont' !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.el-button [class*=ac-icon-] + span {
+  margin-left: 5px;
+}
+.el-pagination__sizes{
+  margin-top: -3px;
+}

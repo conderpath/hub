@@ -1,0 +1,147 @@
+/* // 表格统一样式
+.prefix-border div.cell {
+  position: relative;
+  padding-left: 24px;
+}
+
+.prefix-border th>div.cell::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -8px;
+  height: 16px;
+  border-left: 1px solid #C0C4CC;
+}
+
+.prefix-border tr td:first-child>div.cell::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -8px;
+  height: 16px;
+  border-left: 1px solid #C0C4CC;
+}
+
+// checkbox时第一列没有left-border
+.prefix-border.no-border {
+  th:first-child,
+  td:first-child {
+    div.cell {
+      padding-left: 0;
+    }
+  }
+  th:first-child>div.cell::after {
+    border: none;
+  }
+  tr td:first-child>div.cell::after {
+    border: none;
+  }
+}
+ */
+
+// 弹框
+.el-dialog {
+  .el-dialog__header {
+    .el-dialog__title {
+      color: $color-2;
+      font-size: 16px;
+      /* &::before {
+        content: '';
+        height: 100%;
+        border-width: 3px;
+        border-left: 3px solid $color-1;
+        margin-right: 10px;
+      } */
+    }
+    .el-dialog__close {
+      width: 20px;
+      height: 20px;
+      color: #C0C4CC;
+    }
+  }
+
+  .el-dialog__footer{
+    .el-button {
+      min-width: 96px;
+      height: 36px;
+    }
+  }
+
+}
+
+// 前面带有竖线的title
+.border-title {
+  margin: 20px 0;
+  line-height: 22px;
+  font-size: 16px;
+  &::before {
+    content: '';
+    margin-right: 10px;
+    border-left: 3px solid $color-1;
+  }
+}
+
+// el-tree添加虚线
+.tree-line {
+  .el-tree-node {
+    position: relative;
+    padding-left: 16px; // 缩进量
+  }
+  .el-tree-node__children {
+    padding-left: 16px; // 缩进量
+  }
+  // 竖线
+  .el-tree-node::before {
+    content: "";
+    height: 100%;
+    width: 1px;
+    position: absolute;
+    left: -3px;
+    top: -26px;
+    border-width: 1px;
+    border-left: 1px dashed $color-5;
+  }
+  // 当前层最后一个节点的竖线高度固定
+  .el-tree-node:last-child::before {
+    height: 38px; // 可以自己调节到合适数值
+  }
+  // 横线
+  .el-tree-node::after {
+    content: "";
+    width: 26px;
+    height: 20px;
+    position: absolute;
+    left: -3px;
+    top: 12px;
+    border-width: 1px;
+    border-top: 1px dashed $color-5;
+  }
+  // 去掉最顶层的虚线，放最下面样式才不会被上面的覆盖了
+  &>.el-tree-node::after {
+    border-top: none;
+  }
+  &>.el-tree-node::before {
+    border-left: none;
+  }
+  // 展开关闭的icon
+  .el-tree-node__expand-icon {
+    font-size: 16px;
+    // 叶子节点（无子节点）
+    &.is-leaf {
+      color: transparent;
+      // display: none; // 也可以去掉
+    }
+  }
+}
+
+/*.el-table {
+  .el-button {
+    padding: 2px 0;
+  }
+}*/
+
+.el-tag {
+  margin-right: 10px;
+}

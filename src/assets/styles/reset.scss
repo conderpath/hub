@@ -1,0 +1,362 @@
+@import './theme.scss';
+@import './normalize.scss';
+@import './ui.scss';
+@import '~codemirror/lib/codemirror.css';
+// @import '../font/iconfont.css';
+// form
+.el-form {
+  .el-form-item__content {
+    position: relative;
+    .el-form-item__error {
+      position: absolute;
+      left: 15px;
+      top: -6px;
+      background: #fff;
+      padding: 0 2px;
+      z-index: 999;
+    }
+/*    .el-input--prefix+.el-form-item__error {
+      left: 30px;
+    }*/
+  }
+}
+
+// pagination
+.el-pagination.is-background .btn-prev,
+.el-pagination.is-background .btn-next,
+.el-pagination.is-background .el-pager li {
+  color: $color-4;
+  background-color: $color-10;
+  border: solid 1px $color-5;
+}
+
+.el-pagination.is-background .el-pager li:not(.disabled).active {
+  // background-color: $color-10;
+  border: solid 1px $color-1;
+  color: $color-1;
+}
+
+// danger-button
+.el-button--danger.is-plain {
+  background-color: transparent;
+  border-color: $color-7;
+}
+
+// table
+.el-table {
+  th {
+    background-color: $color-12;
+    .cell{
+      color: rgba(0,0,0,0.85);
+      font-weight: normal;
+    }
+  }
+  th,
+  td {
+    padding: 15px 8px;
+    a {
+      color: $color-1;
+      cursor: pointer
+    }
+  }
+  .cell {
+    font-size: 14px;
+    line-height: 23px;
+    overflow: initial;
+  }
+  .el-radio__label {
+    display: none;
+  }
+  .el-tooltip {
+    overflow: hidden;
+  }
+  .el-table-column--selection .cell {
+    padding-left: 14px;
+  }
+}
+
+.el-form-item.is-error .el-dialog .el-input__inner,
+.el-dialog .el-input__inner:focus {
+  border-color: $color-5;
+}
+
+.page-search,
+.page_search {
+  .el-table {
+    .cell {
+      line-height: 23px;
+      overflow: hidden;
+    }
+  }
+}
+
+// search page styles
+.page-search,
+.page-detail,
+.page_search,
+.page_detail {
+  padding: 20px;
+  // padding-right: 30px;
+  background-color: $color-10;
+  .page_form,
+  .page-form {
+    // padding-left: 20px;
+    .el-form-item {
+      margin-bottom: 20px;
+      margin-right: 20px;
+      // display: flex;
+      .el-form-item__label {
+        // padding: 0 10px;
+        // padding-right: 10px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      .el-form-item__content {
+        // width: calc(100% - 24px);
+        // margin-left: 0!important;
+        .el-select,
+        .el-date-editor.el-input,
+        .el-date-editor.el-input__inner {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .page_line {
+    width: 100%;
+    height: 8px;
+    background-color: #f0f2f5;
+    // margin-bottom: 20px;
+  }
+  .page_table,
+  .page-table {
+    .page_btn_group {
+      justify-content: flex-start;
+    }
+    .el-form-item {
+      margin: 0;
+    }
+    .el-dialog .page_btn_group {
+      justify-content: flex-end;
+    }
+    .el-dialog .el-form-item {
+      margin-bottom: 20px;
+    }
+    .page_search_table_page {
+      display: flex;
+      justify-content: flex-end;
+      padding-top: 24px;
+    }
+    .table_btn {
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .table_edit_btn {
+      color: $color-1;
+      padding-right: 15px;
+    }
+    .table_delete_btn {
+      color: $color-7;
+      padding-right: 15px;
+    }
+  }
+  .page_btn_group {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 10px;
+    >:nth-child(n+2) {
+      margin-left: 12px;
+    }
+  }
+  .page_btn_group.detail_btn_group {
+    justify-content: flex-start;
+  }
+  .page_detail_footer_btn {
+    margin-top: 20px;
+  }
+  .cell_require_flag.cell:before {
+    content: '*';
+    color: $color-7;
+  }
+  .form_btn {
+    min-width: 80px;
+    height: 32px;
+    padding: 10px 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    i {
+      font-size: 14px;
+      //   margin-right: 6px;
+    }
+    iconpark-icon {
+      margin-right: 9px;
+    }
+  }
+}
+
+.page-detail,
+.page_detail {
+  .el-table {
+    .cell {
+      overflow: initial;
+    }
+    .el-form-item__content {
+      margin-left: 0!important;
+    }
+  }
+}
+
+.page-search,
+.page_search {
+  padding: 0;
+  background: none;
+}
+
+// menu
+.el-menu--horizontal>.el-menu-item.is-active {
+  border: none;
+}
+
+
+/*.side-menu .el-scrollbar__view {
+  width: 300px;
+}*/
+
+.el-submenu__title,
+.el-submenu .el-menu-item,
+.el-menu-item {
+  line-height: 44px!important;
+  height: 44px!important;
+}
+
+.el-menu-item:hover,
+.el-menu-item:focus {
+  color: $color-11;
+  background-color: transparent;
+}
+
+.el-menu-item.is-active {
+  color: $color-11;
+}
+
+
+/* .el-submenu>.el-menu-item,.el-submenu .el-submenu>.el-submenu__title {
+  padding-left: 30px!important;
+} */
+
+.el-divider--horizontal {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.el-loading-spinner i {
+  font-size: 36px;
+}
+
+.page_table_detail .hover-row td {
+  background-color: $color-14!important;
+}
+
+// 弹框消息
+
+/* .el-message--success{
+  background-color:#fae6ff;
+  border-color:#fae6ff;
+  .el-icon-success{
+    color:#fff;
+  }
+  .el-message__content{
+    color:#fff;
+  }
+} */
+
+// el-tree 节点划过时 背景色
+.el-tree-node__content:hover {
+  background-color: #fae6ff;
+}
+
+.el-tree-node:focus>.el-tree-node__content {
+  background-color: #fae6ff;
+}
+
+.el-tree-node.is-current>.el-tree-node__content {
+  color: $color-1;
+}
+
+.el-tree-node__expand-icon {
+  color: $color-1;
+}
+
+// 下拉框，日期，输入框宽度设置为外层容器的100%
+.el-select,
+.el-date-editor.el-input,
+.el-date-editor.el-input__inner,
+.el-input,
+.el-textarea,
+.el-slider {
+  width: 100%!important;
+}
+
+.el-pagination .el-select .el-input {
+  width: 100px!important;
+}
+
+//ac form表单 错误提示
+.acvu-form__group {
+  padding-top: 10px;
+}
+
+.el-table__fixed-right {
+  height: 100%!important;
+}
+
+.page_search_form {
+  // margin-bottom: 20px;
+  padding: 20px;
+  padding-bottom: 0;
+  background: $color-10;
+  border-radius: 3px;
+}
+
+.page-basic-table {
+  padding: 20px;
+  background: $color-10;
+  border-radius: 3px;
+  .el-table {
+    border: none;
+    th {
+      border: none;
+      background-color: rgba(0, 0, 0, 0.04);
+    }
+    td {
+      border: none;
+    }
+  }
+  .select-title-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 0 14px;
+    height: 30px;
+    border-radius: 3px;
+    background: $color-13;
+    color: $color-4;
+    i {
+      margin-right: 14px;
+      vertical-align: bottom;
+      color: $color-1;
+    }
+    span {
+      margin: 0 14px;
+    }
+  }
+}
+
+.red {
+  color: $color-7!important;
+}
